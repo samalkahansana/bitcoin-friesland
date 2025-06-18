@@ -693,13 +693,14 @@
         <div class="bottom-wide-card-txt2">info@bitcoinfriesland.com</div>
       </div>
     </div>
+    <div id="footer"></div>
     <script>
-      fetch("/navbar.html")
+      fetch("/components/navbar.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
         });
-      fetch("/footer.html")
+      fetch("/components/footer.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("footer").innerHTML = data;

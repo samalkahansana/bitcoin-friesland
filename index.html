@@ -786,13 +786,14 @@
       Opmerking: Deze informatie is alleen voor educatieve doeleinden en vormt
       geen financieel advies.
     </div>
+    <div id="footer"></div>
     <script>
-      fetch("/navbar.html")
+      fetch("/components/navbar.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
         });
-      fetch("/footer.html")
+      fetch("/components/footer.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("footer").innerHTML = data;

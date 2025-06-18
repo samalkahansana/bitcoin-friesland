@@ -99,7 +99,6 @@
       }
 
       .bk-bottom {
-        
         margin-top: 40px;
         border-radius: 7px;
         height: 1200px;
@@ -206,66 +205,53 @@
         margin-left: 90px;
       }
 
-
       .line6-txt2 {
         margin-left: -20px;
       }
-
 
       .line7-txt2 {
         margin-left: 65px;
       }
 
-
       .line8-txt2 {
         margin-left: 65px;
       }
-
 
       .line9-txt2 {
         margin-left: 65px;
       }
 
-
       .line10-txt2 {
         margin-left: 65px;
       }
-
 
       .lin11-txt2 {
         margin-left: 65px;
       }
 
-
       .line12-txt2 {
         margin-left: 65px;
       }
-
 
       .line13-txt2 {
         margin-left: 65px;
       }
 
-
       .line14-txt2 {
         margin-left: 65px;
       }
-
 
       .line15-txt2 {
         margin-left: 65px;
       }
 
-
       .line16-txt2 {
         margin-left: 65px;
       }
 
-
       .line17-txt2 {
         margin-left: 65px;
       }
-
 
       .line18-txt2 {
         margin-left: 65px;
@@ -275,13 +261,9 @@
         margin-left: 65px;
       }
 
-
       .line20-txt2 {
         margin-left: 65px;
       }
-
-
-
     </style>
   </head>
   <body>
@@ -2419,16 +2401,15 @@
           </svg>
         </div>
       </div>
-
     </div>
-
+    <div id="footer"></div>
     <script>
-      fetch("/navbar.html")
+      fetch("/components/navbar.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
         });
-      fetch("/footer.html")
+      fetch("/components/footer.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("footer").innerHTML = data;

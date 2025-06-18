@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bitcoin Friesland</title>
+    <style>
+      .links-txt1 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        margin-top: 60px;
+      }
+
+      .links-txt2 {
+        text-align: center;
+        font-size: 20px;
+        color: rgb(107, 114, 128);
+        margin-top: 20px;
+      }
+
+      .mini-pages {
+        display: flex;
+        gap: 40px;
+        color: rgb(100, 116, 139);
+        cursor: pointer;
+        margin-top: 30px;
+        margin-left: 383px;
+        width: 580px;
+        padding: 10px;
+        border: 0px solid rgb(226, 232, 240);
+      }
+
+      .mini-page1:hover {
+        color: black;
+      }
+
+      .mini-page2:hover {
+        color: black;
+      }
+
+      .mini-page3:hover {
+        color: black;
+      }
+
+      .mini-page4:hover {
+        color: black;
+      }
+
+      .mini-page5:hover {
+        color: black;
+      }
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+
+      .card {
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+      }
+
+      .card-image {
+        margin: 10px;
+        height: 200px;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+      }
+
+      .card-middle {
+        display: grid;
+        gap: 10px;
+        padding: 20px;
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 102, 204, 0.1),
+          rgba(249 115 22 / 0.1)
+        );
+      }
+
+      .card-middle-bold {
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .card-middle-text {
+        font-size: 14px;
+        color: #64747b;
+      }
+
+      .card-bottom {
+        padding: 20px;
+        display: grid;
+        gap: 20px;
+      }
+
+      .card-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        border-radius: 5px;
+        border: 2px solid #0066cc;
+        text-align: center;
+        padding: 10px;
+        color: #0066cc;
+        font-weight: 700;
+      }
+
+      .card-btn svg {
+        width: 18px;
+      }
+
+      .links-txt3 {
+        font-size: 24px;
+        color: rgb(0, 102, 204);
+        text-align: center;
+        margin-top: 120px;
+        font-weight: 700;
+      }
+
+      .list-card {
+        text-align: center;
+        margin-top: 70px;
+      }
+
+      .list-card-txt1 {
+        font-size: 20px;
+        font-weight: 700;
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 102, 204, 0.1),
+          rgba(249, 115, 22, 0.1),
+          rgba(0, 102, 204, 0.05)
+        );
+        width: 1000px;
+        height: 60px;
+        margin-left: 150px;
+        border-radius: 10px 10px 0 0;
+        padding: 20px;
+      }
+
+      .list-card-body {
+        width: 1000px;
+        margin-left: 150px;
+        height: 208px;
+        border-radius: 0 0 10px 10px;
+      }
+
+      .list-card-ico {
+        color: rgb(0, 102, 204);
+        margin-top: 40px;
+      }
+
+      .list-txt2 {
+        color: rgb(75, 85, 99);
+        font-size: 18px;
+        margin-top: 20px;
+      }
+
+      .list-txt3 {
+        font-size: 20px;
+        color: rgb(0, 102, 204);
+        font-weight: 500;
+        margin-top: 20px;
+      }
+
+      .card-line1 {
+        display: grid;
+        gap: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="links-txt1">Bitcoin Bronnen</div>
+    <div class="links-txt2">
+      Hier zijn een paar nuttige links naar Bitcoin bronnen.
+    </div>
+    <div class="mini-pages">
+      <div class="mini-page1">Alle</div>
+      <div class="mini-page2">Voor Bedrijven</div>
+      <div class="mini-page3">Educatie</div>
+      <div class="mini-page4">Gameenschap</div>
+      <div class="mini-page5">Winkelen</div>
+    </div>
+    <div class="card-container">
+      <div class="card-line1">
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="/"
+              width="30"
+              height="30"
+              alt="Ontvang Bitcoin thumbnail"
+            />
+          </div>
+          <div class="card-middle">
+            <div class="card-middle-bold">Ontvang Bitcoin</div>
+            <div class="card-middle-text">Voor Bedrijven</div>
+          </div>
+          <div class="card-bottom">
+            <p>Informatie voor bedrijven over het accepteren van Bitcoin</p>
+            <div class="card-btn">
+              <span>Bezoek</span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-external-link ml-2 h-4 w-4"
+                data-lov-id="src/components/LinkCard.tsx:79:29"
+                data-lov-name="ExternalLink"
+                data-component-path="src/components/LinkCard.tsx"
+                data-component-line="79"
+                data-component-file="LinkCard.tsx"
+                data-component-name="ExternalLink"
+                data-component-content="%7B%22className%22%3A%22ml-2%20h-4%20w-4%22%7D"
+              >
+                <path d="M15 3h6v6"></path>
+                <path d="M10 14 21 3"></path>
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="/"
+              width="30"
+              height="30"
+              alt="Ontvang Bitcoin thumbnail"
+            />
+          </div>
+          <div class="card-middle">
+            <div class="card-middle-bold">Ontvang Bitcoin</div>
+            <div class="card-middle-text">Voor Bedrijven</div>
+          </div>
+          <div class="card-bottom">
+            <p>Informatie voor bedrijven over het accepteren van Bitcoin</p>
+            <div class="card-btn">
+              <span>Bezoek</span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-external-link ml-2 h-4 w-4"
+                data-lov-id="src/components/LinkCard.tsx:79:29"
+                data-lov-name="ExternalLink"
+                data-component-path="src/components/LinkCard.tsx"
+                data-component-line="79"
+                data-component-file="LinkCard.tsx"
+                data-component-name="ExternalLink"
+                data-component-content="%7B%22className%22%3A%22ml-2%20h-4%20w-4%22%7D"
+              >
+                <path d="M15 3h6v6"></path>
+                <path d="M10 14 21 3"></path>
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="/"
+              width="30"
+              height="30"
+              alt="Ontvang Bitcoin thumbnail"
+            />
+          </div>
+          <div class="card-middle">
+            <div class="card-middle-bold">Ontvang Bitcoin</div>
+            <div class="card-middle-text">Voor Bedrijven</div>
+          </div>
+          <div class="card-bottom">
+            <p>Informatie voor bedrijven over het accepteren van Bitcoin</p>
+            <div class="card-btn">
+              <span>Bezoek</span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-external-link ml-2 h-4 w-4"
+                data-lov-id="src/components/LinkCard.tsx:79:29"
+                data-lov-name="ExternalLink"
+                data-component-path="src/components/LinkCard.tsx"
+                data-component-line="79"
+                data-component-file="LinkCard.tsx"
+                data-component-name="ExternalLink"
+                data-component-content="%7B%22className%22%3A%22ml-2%20h-4%20w-4%22%7D"
+              >
+                <path d="M15 3h6v6"></path>
+                <path d="M10 14 21 3"></path>
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="/"
+              width="30"
+              height="30"
+              alt="Ontvang Bitcoin thumbnail"
+            />
+          </div>
+          <div class="card-middle">
+            <div class="card-middle-bold">Ontvang Bitcoin</div>
+            <div class="card-middle-text">Voor Bedrijven</div>
+          </div>
+          <div class="card-bottom">
+            <p>Informatie voor bedrijven over het accepteren van Bitcoin</p>
+            <div class="card-btn">
+              <span>Bezoek</span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-external-link ml-2 h-4 w-4"
+                data-lov-id="src/components/LinkCard.tsx:79:29"
+                data-lov-name="ExternalLink"
+                data-component-path="src/components/LinkCard.tsx"
+                data-component-line="79"
+                data-component-file="LinkCard.tsx"
+                data-component-name="ExternalLink"
+                data-component-content="%7B%22className%22%3A%22ml-2%20h-4%20w-4%22%7D"
+              >
+                <path d="M15 3h6v6"></path>
+                <path d="M10 14 21 3"></path>
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="/"
+              width="30"
+              height="30"
+              alt="Ontvang Bitcoin thumbnail"
+            />
+          </div>
+          <div class="card-middle">
+            <div class="card-middle-bold">Ontvang Bitcoin</div>
+            <div class="card-middle-text">Voor Bedrijven</div>
+          </div>
+          <div class="card-bottom">
+            <p>Informatie voor bedrijven over het accepteren van Bitcoin</p>
+            <div class="card-btn">
+              <span>Bezoek</span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-external-link ml-2 h-4 w-4"
+                data-lov-id="src/components/LinkCard.tsx:79:29"
+                data-lov-name="ExternalLink"
+                data-component-path="src/components/LinkCard.tsx"
+                data-component-line="79"
+                data-component-file="LinkCard.tsx"
+                data-component-name="ExternalLink"
+                data-component-content="%7B%22className%22%3A%22ml-2%20h-4%20w-4%22%7D"
+              >
+                <path d="M15 3h6v6"></path>
+                <path d="M10 14 21 3"></path>
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-line2">
+      <div class="card">
+        <div class="card-image">
+          <img src="/" width="30" height="30" alt="Ontvang Bitcoin thumbnail" />
+        </div>
+        <div class="card-middle">
+          <div class="card-middle-bold">Ontvang Bitcoin</div>
+          <div class="card-middle-text">Voor Bedrijven</div>
+        </div>
+        <div class="card-bottom">
+          <p>Informatie voor bedrijven over het accepteren van Bitcoin</p>
+          <div class="card-btn">
+            <span>Bezoek</span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-external-link ml-2 h-4 w-4"
+              data-lov-id="src/components/LinkCard.tsx:79:29"
+              data-lov-name="ExternalLink"
+              data-component-path="src/components/LinkCard.tsx"
+              data-component-line="79"
+              data-component-file="LinkCard.tsx"
+              data-component-name="ExternalLink"
+              data-component-content="%7B%22className%22%3A%22ml-2%20h-4%20w-4%22%7D"
+            >
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14 21 3"></path>
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="links-txt3">Stel een evenement voor</div>
+    <div class="list-card">
+      <div class="list-card-txt1">Stel een evenement voor</div>
+      <div class="list-card-body">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="list-card-ico"
+          data-lov-id="src/components/links/EmailInvitation.tsx:31:10"
+          data-lov-name="Mail"
+          data-component-path="src/components/links/EmailInvitation.tsx"
+          data-component-line="31"
+          data-component-file="EmailInvitation.tsx"
+          data-component-name="Mail"
+          data-component-content="%7B%22className%22%3A%22mx-auto%20h-10%20w-10%20text-friesland-blue%20mb-4%22%7D"
+        >
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+        <div class="list-txt2">
+          Heeft u een Bitcoin meetup die u wilt delen? Stuur ons een email op:
+        </div>
+        <div class="list-txt3">info@bitcoinfriesland.com</div>
+      </div>
+    </div>
+    <script>
+      fetch("/navbar.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+      fetch("/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

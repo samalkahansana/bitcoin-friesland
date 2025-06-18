@@ -1,0 +1,2438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bitcoin Friesland</title>
+    <style>
+      .bk-header-txt1 {
+        text-align: center;
+        font-size: 36px;
+        margin-top: 50px;
+        font-weight: 700;
+      }
+
+      .bk-header-txt2 {
+        text-align: center;
+        font-size: 20px;
+        color: color rgb(107, 114, 128);
+        margin-top: 10px;
+      }
+
+      .map-container {
+        background-color: aqua;
+        border-radius: 7px;
+        height: 760px;
+        width: 860px;
+        margin-left: 230px;
+        margin-top: 40px;
+        padding: 18px;
+      }
+
+      .map-container-header {
+        background-image: linear-gradient(
+          to right,
+          rgba(249, 115, 22, 0.2),
+          rgba(0, 102, 204, 0.2)
+        );
+        height: 107px;
+        padding: 20px;
+        border-radius: 10px 10px 0 0;
+        border: 0px solid rgb(243, 244, 246);
+      }
+
+      .map-container-header-txt1 {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .map-container-header-txt2 {
+        font-size: 14px;
+        color: rgb(75, 85, 99);
+        margin-top: 15px;
+      }
+
+      .txt-container {
+        background-color: aliceblue;
+        height: 500px;
+        width: 860px;
+        margin-left: 230px;
+        margin-top: 40px;
+        padding: 32px;
+        border-radius: 7px;
+      }
+
+      .txt-container-txt1 {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .txt-container-txt2 {
+        color: rgb(75, 85, 99);
+        font-size: 16px;
+        margin-top: 20px;
+        width: 680px;
+      }
+
+      .txt-container-txt3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 25px;
+      }
+
+      .list {
+        display: grid;
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .bk-button {
+        text-align: center;
+        margin-top: 40px;
+        background-color: rgb(249, 115, 22);
+        width: 245px;
+        color: white;
+        margin-left: 265px;
+        padding: 10px;
+        border-radius: 7px;
+      }
+
+      .bk-bottom {
+        
+        margin-top: 40px;
+        border-radius: 7px;
+        height: 1200px;
+        padding-top: 30px;
+      }
+
+      .bottom-txt {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+      }
+
+      .bottom-txt-line1 {
+        display: flex;
+        padding: 50px 50px 20px 50px;
+        color: rgb(100, 116, 139);
+      }
+
+      .bottom-txt-line2 {
+        display: flex;
+        padding: 0 50px 0 50px;
+        border-top: 1px solid rgb(226, 232, 240);
+        padding-top: 20px;
+      }
+
+      .txt1 {
+        color: rgb(37, 99, 235);
+      }
+
+      .txt1:hover {
+        color: rgb(37, 99, 235);
+        text-decoration-color: rgb(37, 99, 235);
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .line1 {
+        margin-left: 0px;
+        margin-right: 70px;
+        padding-right: 70px;
+      }
+
+      .line2 {
+        margin-left: -40px;
+      }
+
+      .line3 {
+        margin-left: 190px;
+      }
+
+      .line4 {
+        margin-left: 170px;
+      }
+
+      .line5 {
+        margin-left: 170px;
+      }
+
+      .line6 {
+        margin-left: 100px;
+      }
+
+      .line7 {
+        margin-left: 120px;
+      }
+
+      .txt2 {
+        margin-left: 50px;
+      }
+
+      .txt3 {
+        margin-left: 50px;
+      }
+
+      .txt4 {
+        margin-left: 140px;
+      }
+
+      .txt5 {
+        margin-left: 110px;
+      }
+
+      .txt6 {
+        margin-left: 139px;
+      }
+
+      .txt7 {
+        margin-left: 146px;
+      }
+
+      .line2-txt2 {
+        margin-left: 105px;
+      }
+
+      .line3-txt2 {
+        margin-left: 65px;
+      }
+
+      .line4-txt2 {
+        margin-left: 50px;
+      }
+
+      .line5-txt2 {
+        margin-left: 90px;
+      }
+
+
+      .line6-txt2 {
+        margin-left: -20px;
+      }
+
+
+      .line7-txt2 {
+        margin-left: 65px;
+      }
+
+
+      .line8-txt2 {
+        margin-left: 65px;
+      }
+
+
+      .line9-txt2 {
+        margin-left: 65px;
+      }
+
+
+      .line10-txt2 {
+        margin-left: 65px;
+      }
+
+
+      .lin11-txt2 {
+        margin-left: 65px;
+      }
+
+
+      .line12-txt2 {
+        margin-left: 65px;
+      }
+
+
+      .line13-txt2 {
+        margin-left: 65px;
+      }
+
+
+      .line14-txt2 {
+        margin-left: 65px;
+      }
+
+
+      .line15-txt2 {
+        margin-left: 65px;
+      }
+
+
+      .line16-txt2 {
+        margin-left: 65px;
+      }
+
+
+      .line17-txt2 {
+        margin-left: 65px;
+      }
+
+
+      .line18-txt2 {
+        margin-left: 65px;
+      }
+
+      .line19-txt2 {
+        margin-left: 65px;
+      }
+
+
+      .line20-txt2 {
+        margin-left: 65px;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="bk-header-txt1">Bitcoin Kaart van Friesland</div>
+    <div class="bk-header-txt2">
+      Vind bedrijven en locaties in Friesland die Bitcoin accepteren.
+    </div>
+    <div class="map-container">
+      <div class="map-container-header">
+        <div class="map-container-header-txt1">Bitcoin Kaart</div>
+        <div class="map-container-header-txt2">
+          Vind Bitcoin-vriendelijke plekken
+        </div>
+        <!-- map -->
+      </div>
+    </div>
+    <div class="txt-container">
+      <div class="txt-container-txt1">Over de Bitcoin Kaart</div>
+      <div class="txt-container-txt2">
+        De Bitcoin Kaart toont bedrijven en locaties die Bitcoin-betalingen
+        accepteren in Friesland en over de hele wereld.
+      </div>
+      <div class="txt-container-txt2">
+        De kaart wordt aangedreven door het open-source btcmap.org project,
+        waarmee iedereen kan bijdragen door nieuwe Bitcoin-vriendelijke locaties
+        toe te voegen.
+      </div>
+      <div class="txt-container-txt3">Hoe gebruik je de kaart</div>
+      <div class="list">
+        <li>
+          Zoom in om specifieke gebieden en Bitcoin-accepterende bedrijven te
+          zien
+        </li>
+        <li>Klik op kaart pinnen om details over elke locatie te zien</li>
+        <li>Gebruik de filters om specifieke soorten bedrijven te vinden</li>
+        <li>
+          Draag bij door nieuwe locaties toe te voegen die Bitcoin accepteren
+        </li>
+      </div>
+      <div class="bk-button">
+        Bezoek Officiële BTC Kaart
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="bk-btn-arw"
+          data-lov-id="src/pages/Map.tsx:57:47"
+          data-lov-name="ArrowRight"
+          data-component-path="src/pages/Map.tsx"
+          data-component-line="57"
+          data-component-file="Map.tsx"
+          data-component-name="ArrowRight"
+          data-component-content="%7B%22className%22%3A%22ml-2%20h-4%20w-4%22%7D"
+        >
+          <path d="M5 12h14"></path>
+          <path d="m12 5 7 7-7 7"></path>
+        </svg>
+      </div>
+    </div>
+    <div class="bk-bottom">
+      <div class="bottom-txt">Bitcoin-vriendelijke bedrijven in Friesland</div>
+      <div class="bottom-txt-line1">
+        <div class="line1">Voor Bedrijven</div>
+        <div class="line2">type</div>
+        <div class="line3">address</div>
+        <div class="line4">city</div>
+        <div class="line5">BTCmap</div>
+        <div class="line6">On-Chain</div>
+        <div class="line7">Lightning</div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          In De Brouwerij
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Comino
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line2-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Copy To Print
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line3-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          IJssalon Eatalia
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line4-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          E.M Enjoy
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line5-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Autobedrijf André Flapper
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line6-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Draaiorgelman Marwan Fouwels
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line7-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Eelco Griep
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line8-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Haagsma Elektrotechniek
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line9-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Kreta
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line10-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          MiGems
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line11-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Musykfabryk
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line12-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Nautisch Breed
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line13-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Het Proefdok
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line14-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Royaal Belegd
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line15-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Spar
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line16-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Terschelling Bricks
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line17-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Bouwservice Wagenaar
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line18-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Museum Warkums Erfskip
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line19-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-txt-line2">
+        <div class="txt1">
+          Winged-Dutchman Aero Service
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link ml-1 h-3 w-3"
+            data-lov-id="src/components/BTCBusinessTable.tsx:46:20"
+            data-lov-name="ExternalLink"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="46"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="ExternalLink"
+            data-component-content="%7B%22className%22%3A%22ml-1%20h-3%20w-3%22%7D"
+          >
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            ></path>
+          </svg>
+        </div>
+        <div class="line20-txt2">Restaurant, Café, Hotel</div>
+        <div class="txt3">Zaailand 94</div>
+        <div class="txt4">Leeuwarden</div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt5"
+            data-lov-id="src/components/BTCBusinessTable.tsx:58:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="58"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt6"
+            data-lov-id="src/components/BTCBusinessTable.tsx:73:20"
+            data-lov-name="X"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="73"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="X"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-gray-300%22%7D"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="txt7"
+            data-lov-id="src/components/BTCBusinessTable.tsx:80:20"
+            data-lov-name="Check"
+            data-component-path="src/components/BTCBusinessTable.tsx"
+            data-component-line="80"
+            data-component-file="BTCBusinessTable.tsx"
+            data-component-name="Check"
+            data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-green-500%22%7D"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      fetch("/navbar.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+      fetch("/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

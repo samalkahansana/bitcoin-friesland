@@ -105,10 +105,42 @@
       }
 
       .card2-line1 {
-        text-align: start;
+        display: flex;
+        gap: 10px;
         color: rgb(249, 115, 22);
         font-weight: 700;
         font-size: 24px;
+      }
+
+      .card2-line2 {
+        text-align: start;
+        font-family: 16px;
+        color: rgb(55, 65, 81);
+        margin-top: 28px;
+      }
+
+      .card2-card2 {
+        padding: 24px;
+        text-align: start;
+        background-color: yellow;
+        margin-top: 20px;
+        border-radius: 8px;
+      }
+
+      .card2-card2-txt {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .card2-card2-txt2 {
+        color: rgb(55, 65, 81);
+        font-size: 16px;
+        margin-top: 15px;
+      }
+
+      .card2-card2-column {
+        display: flex;
+        padding: 16px;
       }
     </style>
   </head>
@@ -260,17 +292,91 @@
         </div>
       </div>
     </div>
-    <div class="card2">
-      <div class="card2-line1">Sparen met Bitcoin</div>
-    </div>
 
+    <div class="card2">
+      <div class="card2-line1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-piggy-bank h-8 w-8 text-bitcoin-orange mr-3"
+          data-lov-id="src/components/consumers/SavingWithBitcoin.tsx:13:10"
+          data-lov-name="PiggyBank"
+          data-component-path="src/components/consumers/SavingWithBitcoin.tsx"
+          data-component-line="13"
+          data-component-file="SavingWithBitcoin.tsx"
+          data-component-name="PiggyBank"
+          data-component-content="%7B%22className%22%3A%22h-8%20w-8%20text-bitcoin-orange%20mr-3%22%7D"
+        >
+          <path
+            d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z"
+          ></path>
+          <path d="M2 9v1c0 1.1.9 2 2 2h1"></path>
+          <path d="M16 11h.01"></path>
+        </svg>
+        Sparen met Bitcoin
+      </div>
+      <div class="card2-line2">
+        Voor langetermijnsparen met Bitcoin is het belangrijk om je eigen
+        sleutels te beheren. Hiervoor zijn hardware wallets ideaal - ze bieden
+        maximale veiligheid en controle.
+      </div>
+      <div class="card2-card2">
+        <div class="card2-card2-txt">Waarom zelf je Bitcoin beheren?</div>
+        <div class="card2-card2-txt2">
+          Wanneer je Bitcoin op een exchange laat staan, heb je niet volledig
+          controle over je eigen geld. Het bekende gezegde in de Bitcoin-wereld
+          luidt: "Not your keys, not your coins." Een hardware wallet geeft je
+          volledige controle.
+        </div>
+        <div class="card2-card2-column">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-shield h-6 w-6 text-yellow-600 mr-3"
+              data-lov-id="src/components/consumers/SavingWithBitcoin.tsx:46:16"
+              data-lov-name="Shield"
+              data-component-path="src/components/consumers/SavingWithBitcoin.tsx"
+              data-component-line="46"
+              data-component-file="SavingWithBitcoin.tsx"
+              data-component-name="Shield"
+              data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-yellow-600%20mr-3%22%7D"
+            >
+              <path
+                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+              ></path>
+            </svg>
+            <div class="card2-card2-column-txt">
+            Belangrijk: Een hardware wallet is als een kluis voor je digitale
+            bezittingen. De sleutels blijven veilig offline bewaard, weg van
+            potentiële online bedreigingen.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
     <script>
-      fetch("/navbar.html")
+      fetch("components/navbar.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("navbar").innerHTML = data;
         });
-      fetch("/footer.html")
+      fetch("components/footer.html")
         .then((res) => res.text())
         .then((data) => {
           document.getElementById("footer").innerHTML = data;

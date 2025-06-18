@@ -16,7 +16,6 @@
 
       .btn1-card1 {
         padding: 32px;
-        background-color: aqua;
         margin-top: 40px;
         height: 616px;
         width: 950px;
@@ -50,7 +49,6 @@
 
       .btn1-card1-card2 {
         padding: 24px;
-        background-color: yellow;
         margin-top: 20px;
         border-radius: 10px;
       }
@@ -95,8 +93,7 @@
       }
 
       .card2 {
-        background-color: aqua;
-        height: 616px;
+        height: 800px;
         width: 950px;
         border: 0px solid white;
         border-radius: 20px;
@@ -120,9 +117,8 @@
       }
 
       .card2-card2 {
-        padding: 24px;
+        padding: 24px 24px 60px 24px;
         text-align: start;
-        background-color: yellow;
         margin-top: 20px;
         border-radius: 8px;
       }
@@ -140,7 +136,175 @@
 
       .card2-card2-column {
         display: flex;
-        padding: 16px;
+        padding: 26px;
+        margin-top: 20px;
+        background-color: #fefce8;
+        border-left: 5px solid #facc15;
+      }
+
+      .card2-card2-column-img {
+        margin-left: -18px;
+        color: rgb(161, 98, 7);
+      }
+
+      .card2-card2-column-txt {
+        padding-left: 10px;
+        margin-top: -20px;
+        color: rgb(161, 98, 7);
+      }
+
+      .mini-txt {
+        font-weight: 700;
+      }
+
+      .two-cards {
+        display: flex;
+        gap: 20px;
+      }
+
+      .two-card1 {
+        text-align: start;
+        padding: 24px;
+        margin-top: 20px;
+        width: 430px;
+        height: 290px;
+        border-radius: 8px;
+      }
+
+      .card2-card2-column-card-txt {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .card2-card2-column-card-txt2 {
+        font-size: 16px;
+        color: rgb(55, 65, 81);
+        margin-top: 20px;
+      }
+
+      .link-txt {
+        color: rgb(0, 102, 204);
+        margin-top: 20px;
+      }
+
+      .links-card3 {
+        width: 950px;
+        height: 500px;
+        margin-left: 190px;
+        margin-top: 30px;
+        padding: 32px;
+        border-radius: 8px;
+      }
+
+      .links-card3-txt {
+        color: rgb(249, 115, 22);
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .links-card3-txt2 {
+        font-size: 16px;
+        margin-top: 20px;
+      }
+
+      .lists {
+        display: grid;
+        gap: 10px;
+        font-size: 16px;
+        margin-left: 10px;
+        margin-top: 20px;
+      }
+
+      .mini-txt2 {
+        margin-left: 23px;
+      }
+
+      .links-card3-txt3 {
+        margin-top: 23px;
+      }
+
+      .links-card3-column2 {
+        border-radius: 8px;
+        padding: 24px;
+        margin-top: 20px;
+      }
+
+      .links-card3-txt4 {
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .links-txt {
+        display: flex;
+        gap: 410px;
+        margin-top: 20px;
+        color: rgb(0, 102, 204);
+        cursor: pointer;
+      }
+
+      .links-txt:hover {
+        color: rgb(0, 102, 204);
+        text-decoration: underline;
+      }
+
+      .card4 {
+        width: 950px;
+        height: 500px;
+        margin-left: 190px;
+        margin-top: 30px;
+        border-radius: 8px;
+        padding: 32px;
+      }
+
+      .card4-txt {
+        font-size: 24px;
+        font-weight: 700;
+        color: rgb(0, 102, 204);
+      }
+
+      .card4-txt2 {
+        margin-top: 30px;
+        color: gb(55, 65, 81);
+      }
+
+      .card4-txt3 {
+        padding: 24px;
+        margin-top: 20px;
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      .card4-btns {
+        display: flex;
+        gap: 90px;
+      }
+
+      .card4-btn1 {
+        height: 40px;
+        width: 500px;
+        padding: 7px 16px 30px 16px;
+        text-align: center;
+        margin-top: 30px;
+        border-radius: 8px;
+        background-color: rgb(0, 102, 204);
+        color: white;
+      }
+
+      .card4-btn2 {
+        height: 40px;
+        width: 500px;
+        padding: 7px 16px 30px 16px;
+        text-align: center;
+        margin-top: 30px;
+        border-radius: 8px;
+        background-color: white;
+        color: rgb(0, 102, 204);
+        border: 1px solid rgb(0, 102, 204);
+      }
+
+      .btn2-ico {
+        height: 20px;
+        width: 20px;
       }
     </style>
   </head>
@@ -337,35 +501,388 @@
         </div>
         <div class="card2-card2-column">
           <div>
+            <div class="card2-card2-column-img">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-shield h-6 w-6 text-yellow-600 mr-3"
+                data-lov-id="src/components/consumers/SavingWithBitcoin.tsx:46:16"
+                data-lov-name="Shield"
+                data-component-path="src/components/consumers/SavingWithBitcoin.tsx"
+                data-component-line="46"
+                data-component-file="SavingWithBitcoin.tsx"
+                data-component-name="Shield"
+                data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-yellow-600%20mr-3%22%7D"
+              >
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                ></path>
+              </svg>
+            </div>
+            <div class="card2-card2-column-txt">
+              <span class="mini-txt">Belangrijk:</span>Een hardware wallet is
+              als een kluis voor je digitale bezittingen. De sleutels blijven
+              veilig offline bewaard, weg van potentiële online bedreigingen.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-cards">
+        <div class="two-card1">
+          <div class="card2-card2-column-card-txt">Trezor Bitcoin Only</div>
+
+          <div class="card2-card2-column-card-txt2">
+            De Trezor Safe 3 Bitcoin Only is een gebruiksvriendelijke hardware
+            wallet speciaal ontworpen voor Bitcoin gebruikers. Combineer deze
+            met een Trezor Keep Metal backup voor extra veiligheid.
+          </div>
+          <div class="link-txt">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-shield h-6 w-6 text-yellow-600 mr-3"
-              data-lov-id="src/components/consumers/SavingWithBitcoin.tsx:46:16"
-              data-lov-name="Shield"
+              class="lucide lucide-external-link h-4 w-4 mr-2"
+              data-lov-id="src/components/consumers/SavingWithBitcoin.tsx:80:18"
+              data-lov-name="ExternalLink"
               data-component-path="src/components/consumers/SavingWithBitcoin.tsx"
-              data-component-line="46"
+              data-component-line="80"
               data-component-file="SavingWithBitcoin.tsx"
-              data-component-name="Shield"
-              data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-yellow-600%20mr-3%22%7D"
+              data-component-name="ExternalLink"
+              data-component-content="%7B%22className%22%3A%22h-4%20w-4%20mr-2%22%7D"
             >
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14 21 3"></path>
               <path
-                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
               ></path>
             </svg>
+            Bekjik Trezor Bitcoin Only
+          </div>
+          <div class="link-txt">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-external-link h-4 w-4 mr-2"
+              data-lov-id="src/components/consumers/SavingWithBitcoin.tsx:80:18"
+              data-lov-name="ExternalLink"
+              data-component-path="src/components/consumers/SavingWithBitcoin.tsx"
+              data-component-line="80"
+              data-component-file="SavingWithBitcoin.tsx"
+              data-component-name="ExternalLink"
+              data-component-content="%7B%22className%22%3A%22h-4%20w-4%20mr-2%22%7D"
+            >
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14 21 3"></path>
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+            </svg>
+            Trezor Keep Metal backup
+          </div>
+        </div>
+        <div class="two-card1">
+          <div class="card2-card2-column-card-txt">BitBox</div>
+
+          <div class="card2-card2-column-card-txt2">
+            De BitBox is een compacte, Zwitserse hardware wallet met SD-kaart
+            backup functionaliteit. Eenvoudig in gebruik en zeer veilig.
+          </div>
+          <div class="link-txt">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-external-link h-4 w-4 mr-2"
+              data-lov-id="src/components/consumers/SavingWithBitcoin.tsx:80:18"
+              data-lov-name="ExternalLink"
+              data-component-path="src/components/consumers/SavingWithBitcoin.tsx"
+              data-component-line="80"
+              data-component-file="SavingWithBitcoin.tsx"
+              data-component-name="ExternalLink"
+              data-component-content="%7B%22className%22%3A%22h-4%20w-4%20mr-2%22%7D"
+            >
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14 21 3"></path>
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+            </svg>
+            Bekjik Trezor Bitcoin Only
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="links-card3">
+      <div class="links-card3-txt">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-arrow-right-left h-8 w-8 text-bitcoin-orange mr-3"
+          data-lov-id="src/components/consumers/ConvertingEuros.tsx:80:10"
+          data-lov-name="ArrowRightLeft"
+          data-component-path="src/components/consumers/ConvertingEuros.tsx"
+          data-component-line="80"
+          data-component-file="ConvertingEuros.tsx"
+          data-component-name="ArrowRightLeft"
+          data-component-content="%7B%22className%22%3A%22h-8%20w-8%20text-bitcoin-orange%20mr-3%22%7D"
+        >
+          <path d="m16 3 4 4-4 4"></path>
+          <path d="M20 7H4"></path>
+          <path d="m8 21-4-4 4-4"></path>
+          <path d="M4 17h16"></path>
+        </svg>
+        Bitcoin omzetten naar euro's
+      </div>
+      <div class="links-card3-txt2">
+        Het omwisselen van Bitcoin naar euro's is eenvoudig via verschillende
+        methoden:
+      </div>
+      <div class="lists">
+        <li>Gebruik een Bitcoin-uitwisseling zoals Bitonic of Strike</li>
+        <li>Sommige Bitcoin-geldautomaten bieden ook opnamemogelijkheden</li>
+        <li>
+          Voor kleinere bedragen kan peer-to-peer handelen via platforms als
+          Bisq of Hodl Hodl meer privacy bieden
+        </li>
+        <li>
+          Bedrijfseigenaren kunnen ook betalingsverwerkers gebruiken die
+          binnenkomende Bitcoin automatisch omzetten naar
+          <span class="mini-txt2">euro's</span>
+        </li>
+      </div>
+      <div class="links-card3-txt3">
+        Het is belangrijk om op de hoogte te blijven van de huidige
+        belastingregels rondom het omzetten van cryptocurrencies naar
+        fiat-valuta in Nederland.
+      </div>
+      <div class="links-card3-column2">
+        <div class="links-card3-txt4">Populaire Uitwisselingen</div>
+        <div class="links-txt">
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-external-link h-4 w-4 mr-2"
+              data-lov-id="src/components/consumers/ConvertingEuros.tsx:111:16"
+              data-lov-name="ExternalLink"
+              data-component-path="src/components/consumers/ConvertingEuros.tsx"
+              data-component-line="111"
+              data-component-file="ConvertingEuros.tsx"
+              data-component-name="ExternalLink"
+              data-component-content="%7B%22className%22%3A%22h-4%20w-4%20mr-2%22%7D"
+            >
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14 21 3"></path>
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+            </svg>
+            Bitonic</span
+          >
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-external-link h-4 w-4 mr-2"
+              data-lov-id="src/components/consumers/ConvertingEuros.tsx:111:16"
+              data-lov-name="ExternalLink"
+              data-component-path="src/components/consumers/ConvertingEuros.tsx"
+              data-component-line="111"
+              data-component-file="ConvertingEuros.tsx"
+              data-component-name="ExternalLink"
+              data-component-content="%7B%22className%22%3A%22h-4%20w-4%20mr-2%22%7D"
+            >
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14 21 3"></path>
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+            </svg>
+            Strike</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="card4">
+      <div class="card4-txt">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="34"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-user h-8 w-8 text-friesland-blue mr-3"
+          data-lov-id="src/components/consumers/CommunityHelp.tsx:15:10"
+          data-lov-name="User"
+          data-component-path="src/components/consumers/CommunityHelp.tsx"
+          data-component-line="15"
+          data-component-file="CommunityHelp.tsx"
+          data-component-name="User"
+          data-component-content="%7B%22className%22%3A%22h-8%20w-8%20text-friesland-blue%20mr-3%22%7D"
+        >
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span class="txt">Hulp nodig?</span>
+      </div>
+      <div class="card4-txt2">
+        Ben je nieuw met Bitcoin en heb je vragen? De Bitcoin Friesland
+        community staat voor je klaar om te helpen.
+      </div>
+      <div class="card4-txt3">
+        <div>Sluit je aan bij onze community</div>
+        <div class="card2-card2-column">
+          <div>
+            <div class="card2-card2-column-img">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-shield h-6 w-6 text-yellow-600 mr-3"
+                data-lov-id="src/components/consumers/SavingWithBitcoin.tsx:46:16"
+                data-lov-name="Shield"
+                data-component-path="src/components/consumers/SavingWithBitcoin.tsx"
+                data-component-line="46"
+                data-component-file="SavingWithBitcoin.tsx"
+                data-component-name="Shield"
+                data-component-content="%7B%22className%22%3A%22h-6%20w-6%20text-yellow-600%20mr-3%22%7D"
+              >
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                ></path>
+              </svg>
+            </div>
             <div class="card2-card2-column-txt">
-            Belangrijk: Een hardware wallet is als een kluis voor je digitale
-            bezittingen. De sleutels blijven veilig offline bewaard, weg van
-            potentiële online bedreigingen.
+              <span class="mini-txt">Belangrijk:</span>Een hardware wallet is
+              als een kluis voor je digitale bezittingen. De sleutels blijven
+              veilig offline bewaard, weg van potentiële online bedreigingen.
             </div>
           </div>
+        </div>
+      </div>
+      <div class="card4-btns">
+        <div class="card4-btn1">
+          Kom naar een bijeenkomst
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-right ml-2 h-4 w-4"
+            data-lov-id="src/components/consumers/CommunityHelp.tsx:63:18"
+            data-lov-name="ArrowRight"
+            data-component-path="src/components/consumers/CommunityHelp.tsx"
+            data-component-line="63"
+            data-component-file="CommunityHelp.tsx"
+            data-component-name="ArrowRight"
+            data-component-content="%7B%22className%22%3A%22ml-2%20h-4%20w-4%22%7D"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </div>
+        <div class="card4-btn2">
+          <svg
+            data-lov-id="src/components/consumers/CommunityHelp.tsx:74:18"
+            data-lov-name="TelegramIcon"
+            data-component-path="src/components/consumers/CommunityHelp.tsx"
+            data-component-line="74"
+            data-component-file="CommunityHelp.tsx"
+            data-component-name="TelegramIcon"
+            data-component-content="%7B%22className%22%3A%22mr-2%20h-4%20w-4%22%7D"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="btn2-ico"
+          >
+            <path
+              data-lov-id="src/components/icons/TelegramIcon.tsx:14:4"
+              data-lov-name="path"
+              data-component-path="src/components/icons/TelegramIcon.tsx"
+              data-component-line="14"
+              data-component-file="TelegramIcon.tsx"
+              data-component-name="path"
+              data-component-content="%7B%7D"
+              d="M22 2L11 13"
+            ></path>
+            <path
+              data-lov-id="src/components/icons/TelegramIcon.tsx:15:4"
+              data-lov-name="path"
+              data-component-path="src/components/icons/TelegramIcon.tsx"
+              data-component-line="15"
+              data-component-file="TelegramIcon.tsx"
+              data-component-name="path"
+              data-component-content="%7B%7D"
+              d="M22 2L15 22L11 13L2 9L22 2Z"
+            ></path>
+          </svg>
+          Join onze Telegram groep
         </div>
       </div>
     </div>

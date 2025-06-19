@@ -6,23 +6,99 @@
     <link rel="stylesheet" href="style.css" />
     <title>Bitcoin Friesland</title>
     <style>
+      .hero-section {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0;
+        gap: 30px;
+        background-image: linear-gradient(
+          to right bottom,
+          rgb(249, 250, 251),
+          rgb(243, 244, 246)
+        );
+      }
+
+      .hero-section-text {
+        max-width: 700px;
+        font-size: 18px;
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        line-height: 1.5;
+        gap: 30px;
+      }
+
+      .hero-section-text h2 {
+        font-size: 48px;
+      }
+
+      .circle1,
+      .circle2 {
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+        margin: 0 150px;
+      }
+
+      .circle1 {
+        background-color: rgba(0, 102, 204, 0.05);
+        position: absolute;
+        left: 0;
+      }
+
+      .circle2 {
+        background-color: rgba(249, 115, 22, 0.05);
+        position: absolute;
+        right: 0;
+      }
+
+      .hero-btn-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 18px;
+      }
+
+      .hero-btn-container a {
+        text-decoration: none;
+      }
+
+      .hero-btn-container a:hover {
+        border-bottom: 1px solid #0066cc;
+      }
+
+      .hero-btn-container svg {
+        color: #0066cc;
+        width: 20px;
+      }
+
+      .hero-btn {
+        display: flex;
+        justify-content: center;
+        background-color: #0066cc;
+        max-width: 200px;
+        padding: 30px 35px;
+        border-radius: 10px;
+        color: #fff;
+      }
+
+      .hero-link-container {
+        display: flex;
+        gap: 8px;
+      }
+
+      .hero-link {
+        color: #0066cc;
+        text-decoration: none;
+      }
+
       .head-txt {
         font-size: 48px;
         text-align: center;
         font-weight: 700;
         margin-top: 60px;
-      }
-
-      .background-image {
-        background-color: aqua;
-        padding: 40px 0;
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        width: 100vw;
-        height: 650px;
       }
 
       .head-txt2 {
@@ -41,12 +117,6 @@
         font-size: 19px;
         margin-left: 600px;
         margin-top: 40px;
-      }
-
-      .head-line {
-        display: flex;
-        gap: 100px;
-        margin-left: 710px;
       }
 
       .head-btn {
@@ -89,11 +159,11 @@
       }
 
       .lable1 {
-        background-color: aqua;
         width: 720px;
         height: 140px;
         padding: 24px;
         border-radius: 8px;
+        border: 1px solid #e2e8f0;
       }
 
       .tick-ico {
@@ -156,7 +226,7 @@
       }
 
       .hero-lable1 {
-        background-color: aqua;
+        border: 1px solid #e2e8f0;
         height: 170px;
         padding: 24px;
         font-size: 18px;
@@ -231,13 +301,13 @@
 
       .footer-lables {
         display: flex;
-        background-color: antiquewhite;
         width: 1260px;
         border-radius: 10px;
         height: 330px;
         margin-left: 80px;
         margin-top: 30px;
         padding: 40px;
+        border: 1px solid #e2e8f0;
       }
 
       .footer-lable-txt {
@@ -259,12 +329,12 @@
       }
 
       .footer-lable {
-        background-color: yellow;
         border-radius: 10px;
         width: 600px;
         margin-left: 250px;
         text-align: start;
         padding: 32px;
+        border: 1px solid #e2e8f0;
       }
 
       .footer-lable-text1 {
@@ -297,7 +367,6 @@
       }
 
       .lables1-footer {
-        background-color: aqua;
         width: 900px;
         margin-left: 300px;
         padding: 20px;
@@ -306,6 +375,7 @@
         height: 70px;
         font-size: 18px;
         font-weight: 700;
+        border: 1px solid #e2e8f0;
       }
 
       .lables1-footer:hover {
@@ -341,12 +411,12 @@
       .footer-card1 {
         width: 600px;
         height: 320px;
-        background-color: yellow;
         padding: 32px;
         color: #0066cc;
         border-radius: 10px;
         font-size: 20px;
         margin-top: 50px;
+        border: 1px solid #e2e8f0;
       }
 
       .footer-mini-txt {
@@ -356,8 +426,8 @@
         margin-top: 20px;
       }
 
-      .footer-card-btn {
-        background-color: lime;
+      .footer-card-btn1,
+      .footer-card-btn2 {
         color: black;
         margin-top: 20px;
         justify-content: center;
@@ -367,53 +437,68 @@
         border-radius: 10px;
       }
 
-      .footer-card-btn:hover {
+      .footer-card-btn1:hover {
         color: #e0ebf6;
         background-color: #f97415;
+      }
+
+      .footer-card-btn2 {
+        background-color: #0066cc;
+      }
+
+      .footer-card-btn2:hover {
+        background-color: lightblue;
       }
     </style>
   </head>
   <body>
     <div id="navbar"></div>
-    <div class="background-image">
-      zelf hoe boodschappen elk jaar duurder worden, omdat de euro gevoelig is
-      voor inflatie. Bitcoin is net als goud schaars. Hierdoor behoudt Bitcoin
-      mogelijk beter zijn koopkracht voor jou als ondernemer en je klanten.
-    </div>
-    <div class="head-txt3">
-      Betalen met Bitcoin werkt bovendien eenvoudig en snel. Net zo gemakkelijk
-      als cash, maar dan digitaal. Dat past perfect bij onze Friese mentaliteit:
-      duidelijk, zelfstandig en zonder gedoe.
-    </div>
-    <div class="head-line">
-      <div class="head-btn">Direct beginnen</div>
-      <div class="head-img-txt">
-        Meest gestelde vragen
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-arrow-down ml-2 h-5 w-5"
-          data-lov-id="src/components/business/BusinessHero.tsx:64:14"
-          data-lov-name="ArrowDown"
-          data-component-path="src/components/business/BusinessHero.tsx"
-          data-component-line="64"
-          data-component-file="BusinessHero.tsx"
-          data-component-name="ArrowDown"
-          data-component-content="%7B%22className%22%3A%22ml-2%20h-5%20w-5%22%7D"
-        >
-          <path d="M12 5v14"></path>
-          <path d="m19 12-7 7-7-7"></path>
-        </svg>
+    <div class="hero-section">
+      <div class="circle1"></div>
+      <div class="hero-section-text">
+        <h2>Bitcoin voor Bedrijven</h2>
+        <p>
+          Bitcoin is het nieuwe digitale goud. Je merkt zelf hoe boodschappen
+          elk jaar duurder worden, omdat de euro gevoelig is voor inflatie.
+          Bitcoin is net als goud schaars. Hierdoor behoudt Bitcoin mogelijk
+          beter zijn koopkracht voor jou als ondernemer en je klanten.
+        </p>
+        <p>
+          Betalen met Bitcoin werkt bovendien eenvoudig en snel. Net zo
+          gemakkelijk als cash, maar dan digitaal. Dat past perfect bij onze
+          Friese mentaliteit: duidelijk, zelfstandig en zonder gedoe.
+        </p>
+      </div>
+      <div class="circle2"></div>
+      <div class="hero-btn-container">
+        <div class="hero-btn">Direct beginnen</div>
+        <div class="hero-link-container">
+          <a href="hero-link">Meest gestelde vragen</a
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-down ml-2 h-5 w-5"
+            data-lov-id="src/components/business/BusinessHero.tsx:64:14"
+            data-lov-name="ArrowDown"
+            data-component-path="src/components/business/BusinessHero.tsx"
+            data-component-line="64"
+            data-component-file="BusinessHero.tsx"
+            data-component-name="ArrowDown"
+            data-component-content="%7B%22className%22%3A%22ml-2%20h-5%20w-5%22%7D"
+          >
+            <path d="M12 5v14"></path>
+            <path d="m19 12-7 7-7-7"></path>
+          </svg>
+        </div>
       </div>
     </div>
-
     <div class="body-card-lable">
       <div class="hero-text">Waarom Bitcoin?</div>
       <div class="lables">
@@ -514,217 +599,222 @@
           </div>
         </div>
       </div>
-      <div class="hero-main-txt">Begin met het accepteren van Bitcoin</div>
-      <div class="hero-main-txt2">
-        Ontvang Bitcoin direct, net zoals Spar City Leeuwarden, Restaurant Kreta
-        en vele anderen. Verschillende winkeliers hebben goede ervaring met
-        coinos.io. Dit gebruiksvriendelijke platform laat je direct
-        Bitcoin-betalingen accepteren – zonder complexe technische kennis. Er
-        zijn ook andere opties zoals Wallet of Satoshi.
-      </div>
-      <div class="hero-main-txt3">Het opzetten van coinos.io is eenvoudig:</div>
-      <div class="hero-lables">
-        <div class="hero-lable1">
-          <div class="number1">1</div>
-          <div class="hero-main-lable-txt">Maak een account aan</div>
-          <div class="hero-main-lable-txt2">
-            Registreer je bij coinos.io met je bedrijfsnaam (deze naam wordt
-            gebruikt voor je wallet)
+      <div>
+        <div class="hero-main-txt">Begin met het accepteren van Bitcoin</div>
+        <div class="hero-main-txt2">
+          Ontvang Bitcoin direct, net zoals Spar City Leeuwarden, Restaurant
+          Kreta en vele anderen. Verschillende winkeliers hebben goede ervaring
+          met coinos.io. Dit gebruiksvriendelijke platform laat je direct
+          Bitcoin-betalingen accepteren – zonder complexe technische kennis. Er
+          zijn ook andere opties zoals Wallet of Satoshi.
+        </div>
+        <div class="hero-main-txt3">
+          Het opzetten van coinos.io is eenvoudig:
+        </div>
+        <div class="hero-lables">
+          <div class="hero-lable1">
+            <div class="number1">1</div>
+            <div class="hero-main-lable-txt">Maak een account aan</div>
+            <div class="hero-main-lable-txt2">
+              Registreer je bij coinos.io met je bedrijfsnaam (deze naam wordt
+              gebruikt voor je wallet)
+            </div>
+          </div>
+          <div class="hero-lable1">
+            <div class="number1">2</div>
+            <div class="hero-main-lable-txt">Stel je profiel in</div>
+            <div class="hero-main-lable-txt2">
+              Voeg je bedrijfsgegevens toe zoals je logo en openingstijden
+            </div>
+          </div>
+          <div class="hero-lable1">
+            <div class="number1">3</div>
+            <div class="hero-main-lable-txt">
+              Begin met het accepteren van betalingen
+            </div>
+            <div class="hero-main-lable-txt2">
+              Genereer Bitcoin-betaling QR-codes voor je klanten om te scannen.
+              Voeg optioneel een drempel toe om hogere bedragen bitcoin naar je
+              eigen wallet te sturen
+            </div>
+          </div>
+          <div class="hero-lable1">
+            <div class="number1">4</div>
+            <div class="hero-main-lable-txt">Neem contact met ons op</div>
+            <div class="hero-main-lable-txt2">
+              Neem contact met ons op of stuur ons een e-mail via
+              hoi@bitcoinfriesland.com en we zullen je locatie toevoegen aan de
+              lijst, kaart en je enkele 'Betaal hier met Bitcoin' stickers
+              geven.
+            </div>
           </div>
         </div>
-        <div class="hero-lable1">
-          <div class="number1">2</div>
-          <div class="hero-main-lable-txt">Stel je profiel in</div>
-          <div class="hero-main-lable-txt2">
-            Voeg je bedrijfsgegevens toe zoals je logo en openingstijden
+        <div class="footer-lables">
+          <div class="footer-lists">
+            <div class="footer-lable-txt">Waarom coinos.io?</div>
+            <div class="footer-lable-line1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="tick-ico2"
+                `
+                data-lov-id="src/components/business/StartAcceptingBitcoin.tsx:124:20"
+                data-lov-name="Check"
+                data-component-path="src/components/business/StartAcceptingBitcoin.tsx"
+                data-component-line="124"
+                data-component-file="StartAcceptingBitcoin.tsx"
+                data-component-name="Check"
+                data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-friesland-blue%22%7D"
+              >
+                <path d="M20 6 9 17l-5-5"></path>
+              </svg>
+              Eenvoudig registratie- en installatieproces
+            </div>
+            <div class="footer-lable-line1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="tick-ico2"
+                `
+                data-lov-id="src/components/business/StartAcceptingBitcoin.tsx:124:20"
+                data-lov-name="Check"
+                data-component-path="src/components/business/StartAcceptingBitcoin.tsx"
+                data-component-line="124"
+                data-component-file="StartAcceptingBitcoin.tsx"
+                data-component-name="Check"
+                data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-friesland-blue%22%7D"
+              >
+                <path d="M20 6 9 17l-5-5"></path>
+              </svg>
+              Accepteer zowel on-chain als Lightning-betalingen
+            </div>
+            <div class="footer-lable-line1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="tick-ico2"
+                `
+                data-lov-id="src/components/business/StartAcceptingBitcoin.tsx:124:20"
+                data-lov-name="Check"
+                data-component-path="src/components/business/StartAcceptingBitcoin.tsx"
+                data-component-line="124"
+                data-component-file="StartAcceptingBitcoin.tsx"
+                data-component-name="Check"
+                data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-friesland-blue%22%7D"
+              >
+                <path d="M20 6 9 17l-5-5"></path>
+              </svg>
+              Gebruiksvriendelijke interface
+            </div>
+            <div class="footer-lable-line1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="tick-ico2"
+                `
+                data-lov-id="src/components/business/StartAcceptingBitcoin.tsx:124:20"
+                data-lov-name="Check"
+                data-component-path="src/components/business/StartAcceptingBitcoin.tsx"
+                data-component-line="124"
+                data-component-file="StartAcceptingBitcoin.tsx"
+                data-component-name="Check"
+                data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-friesland-blue%22%7D"
+              >
+                <path d="M20 6 9 17l-5-5"></path>
+              </svg>
+              Geen technische expertise vereist
+            </div>
+            <div class="footer-lable-line1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="tick-ico2"
+                `
+                data-lov-id="src/components/business/StartAcceptingBitcoin.tsx:124:20"
+                data-lov-name="Check"
+                data-component-path="src/components/business/StartAcceptingBitcoin.tsx"
+                data-component-line="124"
+                data-component-file="StartAcceptingBitcoin.tsx"
+                data-component-name="Check"
+                data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-friesland-blue%22%7D"
+              >
+                <path d="M20 6 9 17l-5-5"></path>
+              </svg>
+              Werkt direct op je smartphone of tablet
+            </div>
           </div>
-        </div>
-        <div class="hero-lable1">
-          <div class="number1">3</div>
-          <div class="hero-main-lable-txt">
-            Begin met het accepteren van betalingen
-          </div>
-          <div class="hero-main-lable-txt2">
-            Genereer Bitcoin-betaling QR-codes voor je klanten om te scannen.
-            Voeg optioneel een drempel toe om hogere bedragen bitcoin naar je
-            eigen wallet te sturen
-          </div>
-        </div>
-        <div class="hero-lable1">
-          <div class="number1">4</div>
-          <div class="hero-main-lable-txt">Neem contact met ons op</div>
-          <div class="hero-main-lable-txt2">
-            Neem contact met ons op of stuur ons een e-mail via
-            hoi@bitcoinfriesland.com en we zullen je locatie toevoegen aan de
-            lijst, kaart en je enkele 'Betaal hier met Bitcoin' stickers geven.
-          </div>
-        </div>
-      </div>
-      <div class="footer-lables">
-        <div class="footer-lists">
-          <div class="footer-lable-txt">Waarom coinos.io?</div>
-          <div class="footer-lable-line1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="tick-ico2"
-              `
-              data-lov-id="src/components/business/StartAcceptingBitcoin.tsx:124:20"
-              data-lov-name="Check"
-              data-component-path="src/components/business/StartAcceptingBitcoin.tsx"
-              data-component-line="124"
-              data-component-file="StartAcceptingBitcoin.tsx"
-              data-component-name="Check"
-              data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-friesland-blue%22%7D"
-            >
-              <path d="M20 6 9 17l-5-5"></path>
-            </svg>
-            Eenvoudig registratie- en installatieproces
-          </div>
-          <div class="footer-lable-line1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="tick-ico2"
-              `
-              data-lov-id="src/components/business/StartAcceptingBitcoin.tsx:124:20"
-              data-lov-name="Check"
-              data-component-path="src/components/business/StartAcceptingBitcoin.tsx"
-              data-component-line="124"
-              data-component-file="StartAcceptingBitcoin.tsx"
-              data-component-name="Check"
-              data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-friesland-blue%22%7D"
-            >
-              <path d="M20 6 9 17l-5-5"></path>
-            </svg>
-            Accepteer zowel on-chain als Lightning-betalingen
-          </div>
-          <div class="footer-lable-line1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="tick-ico2"
-              `
-              data-lov-id="src/components/business/StartAcceptingBitcoin.tsx:124:20"
-              data-lov-name="Check"
-              data-component-path="src/components/business/StartAcceptingBitcoin.tsx"
-              data-component-line="124"
-              data-component-file="StartAcceptingBitcoin.tsx"
-              data-component-name="Check"
-              data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-friesland-blue%22%7D"
-            >
-              <path d="M20 6 9 17l-5-5"></path>
-            </svg>
-            Gebruiksvriendelijke interface
-          </div>
-          <div class="footer-lable-line1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="tick-ico2"
-              `
-              data-lov-id="src/components/business/StartAcceptingBitcoin.tsx:124:20"
-              data-lov-name="Check"
-              data-component-path="src/components/business/StartAcceptingBitcoin.tsx"
-              data-component-line="124"
-              data-component-file="StartAcceptingBitcoin.tsx"
-              data-component-name="Check"
-              data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-friesland-blue%22%7D"
-            >
-              <path d="M20 6 9 17l-5-5"></path>
-            </svg>
-            Geen technische expertise vereist
-          </div>
-          <div class="footer-lable-line1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="tick-ico2"
-              `
-              data-lov-id="src/components/business/StartAcceptingBitcoin.tsx:124:20"
-              data-lov-name="Check"
-              data-component-path="src/components/business/StartAcceptingBitcoin.tsx"
-              data-component-line="124"
-              data-component-file="StartAcceptingBitcoin.tsx"
-              data-component-name="Check"
-              data-component-content="%7B%22className%22%3A%22h-5%20w-5%20text-friesland-blue%22%7D"
-            >
-              <path d="M20 6 9 17l-5-5"></path>
-            </svg>
-            Werkt direct op je smartphone of tablet
-          </div>
-        </div>
-        <div class="footer-lable">
-          <div class="footer-lable-text1">
-            Begin vandaag met het accepteren van Bitcoin
-          </div>
-          <div class="footer-lable-text2">
-            Sluit je aan bij de groeiende gemeenschap van bedrijven die
-            Bitcoin-betalingen accepteren en blijf voorop lopen.
-          </div>
+          <div class="footer-lable">
+            <div class="footer-lable-text1">
+              Begin vandaag met het accepteren van Bitcoin
+            </div>
+            <div class="footer-lable-text2">
+              Sluit je aan bij de groeiende gemeenschap van bedrijven die
+              Bitcoin-betalingen accepteren en blijf voorop lopen.
+            </div>
 
-          <div class="footer-lable-btn">
-            Bezoek coinos.io
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-external-link ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
-              data-lov-id="src/components/business/StartAcceptingBitcoin.tsx:203:20"
-              data-lov-name="ExternalLink"
-              data-component-path="src/components/business/StartAcceptingBitcoin.tsx"
-              data-component-line="203"
-              data-component-file="StartAcceptingBitcoin.tsx"
-              data-component-name="ExternalLink"
-              data-component-content="%7B%22className%22%3A%22ml-2%20h-5%20w-5%20group-hover%3Atranslate-x-1%20transition-transform%22%7D"
-            >
-              <path d="M15 3h6v6"></path>
-              <path d="M10 14 21 3"></path>
-              <path
-                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-              ></path>
-            </svg>
+            <div class="footer-lable-btn">
+              Bezoek coinos.io
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-external-link ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
+                data-lov-id="src/components/business/StartAcceptingBitcoin.tsx:203:20"
+                data-lov-name="ExternalLink"
+                data-component-path="src/components/business/StartAcceptingBitcoin.tsx"
+                data-component-line="203"
+                data-component-file="StartAcceptingBitcoin.tsx"
+                data-component-name="ExternalLink"
+                data-component-content="%7B%22className%22%3A%22ml-2%20h-5%20w-5%20group-hover%3Atranslate-x-1%20transition-transform%22%7D"
+              >
+                <path d="M15 3h6v6"></path>
+                <path d="M10 14 21 3"></path>
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -870,7 +960,7 @@
             Bitcoin-betalingen accepteren. Van restaurants tot winkels, vind
             plaatsen waar je je Bitcoin lokaal kunt uitgeven.
           </div>
-          <div class="footer-card-btn">
+          <div class="footer-card-btn1">
             Bekijk alle bedrijven
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -927,7 +1017,7 @@
             locaties in Friesland. Plan je route en ontdek nieuwe plaatsen om je
             Bitcoin te gebruiken in je lokale omgeving.
           </div>
-          <div class="footer-card-btn">
+          <div class="footer-card-btn2">
             Verken de kaart
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -9,10 +9,17 @@ body {
   width: 100%;
   justify-content: center;
   max-width: 1300px;
+  width: 100vw;
   font-family: sans-serif;
   margin: 0 auto;
   padding: 0 20px;
   overflow-x: hidden;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 .body-txt {
